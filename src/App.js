@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import Item from './Components/Item';
-
+import Cart from './Components/Cart';
 function App() {
 
   return (
@@ -9,6 +9,7 @@ function App() {
       <Item name="IPhone 14" price = "700"/>
       <Item name="Samsung S23" price = "800"/>
       <Item name="Pendrive" price = "200"/>
+      <Cart/>
     </div>
   );
 };

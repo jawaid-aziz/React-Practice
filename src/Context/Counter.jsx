@@ -1,14 +1,14 @@
 import { createContext, useState } from "react";
 
-export const CounterContext = createContext(null);
+export const CartContext = createContext(null);
 
-export const CounterProvider = (props) => {
+export const CartProvider = (props) => {
 
-    const [count, setCount] = useState(5);
+    const [items, setItems] = useState([]);
 
     return (
-        <CounterContext.Provider value = {{count,setCount}}>
+        <CartContext.Provider value = {{items,setItems}}>
             {props.children}
-        </CounterContext.Provider>
+        </CartContext.Provider>
     );
 };
