@@ -1,21 +1,16 @@
 import { useEffect, useState } from 'react';
-import getPosts from './Api';
-import './App.css';
-import PostCard from './Components/PostCard';
+import Counter from './Components/Counter';
 
 function App() {
 
-  const [data, setData] = useState(null);
-
-  useEffect( () => {
-    getPosts().then((posts) => setData(posts));
-  }, []);
 
   return (
     <div className="App">
-      {
-        data ? data.map(e => <PostCard title={e.title} body = {e.body}/>) : <p>No Data</p>
-      }
+      <h1>Counter is 0</h1>
+    <Counter/>
+    <Counter/>
+    <Counter/>
+    <Counter/>
     </div>
   );
 };
