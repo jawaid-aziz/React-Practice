@@ -1,8 +1,14 @@
-import React, { useContext } from "react";
-import { CartContext } from "../Context/Counter";
-const Item = (props) => {
-  const cart = useContext(CartContext);
+import React from "react";
+import { useCart} from "../Context/Counter";
 
+const Item = (props) => {
+  const cart = useCart();
+  const addItemToCart = () => {
+    cart.setItems([
+      ...cart.items,
+      {name: props.name, price: parseInt(props.price) },
+    ]);
+  };
   return (
     <div
       className="item-card"
@@ -14,13 +20,7 @@ const Item = (props) => {
     >
       <h4>{props.name}</h4>
       <p>Price: ${props.price}</p>
-      <button
-        onClick={() =>
-          cart.setItems([
-            ...cart.items,
-            { name: props.name, price: props.price },
-          ])
-        }
+      <button onClick={addItemToCart}
       >
         Add to Cart
       </button>
