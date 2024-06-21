@@ -7,7 +7,7 @@ import { useWeather } from "./Components/Context";
 function App() {
   const weather = useWeather();
   useEffect(() => {
-
+    weather.fetchLocation();
   }, []);
 
   return (
