@@ -6,10 +6,13 @@ import Input from "./Components/input";
 function App() {
 
   return (
-    <div className="App" style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+    <div className="App" style={{display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
       <h1>Weather Forcast</h1>
       <Input/>
-      
+      <Button value="Search"/>
+      <Card/>
+      <Button value="Refresh"/>
+
     </div>
   );
 };

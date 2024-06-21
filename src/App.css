@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.inputField {
+  border-radius: 10px;
+  border: 0px;
+  font-size: 25px;
+}
